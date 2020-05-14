@@ -154,3 +154,64 @@ mensajito
      pepito  tty3   2020-01-20
      root    tty1   2020-01-20
      root    tty2   2020-01-20 
+  
+   su -root  -> Cargar el perfil de root
+   sudo para pasarse como otro usuario
+   
+   usermod -u 501 pepito
+   
+   tar -> Empaquetador
+   unzip -> Compresor
+   which zip
+   which jar
+   which tar
+   
+   Cuando compartes algo con TCP/IP se pierden los permisos.
+   Se recomienda hacer BACKUP en frio.
+   Parar la Base de Datos y hacerlo en una terminal
+   
+   tar cvf  /home/pepito/empaquetado.tar  /tmp/valencia
+   
+       c de compress
+       v de verbose
+       f de fichero
+       
+   tmp/valencia
+          /___
+          /___
+          /___
+        
+        ||      metadata (permisos, fecha I-Nodos)
+                         (bloques)
+   empaquetado tar
+   
+   Para restaurar con la x
+                    ________________________________________
+   gzip /home/pepito/empaquetado.tar
+   ls -l /home/pepito/empaquetado.tar.gz
+   du -sh /home/pepito/empaquetado.tar.gz
+   
+   cp /home/pepito/empaquetado.tar.gz /root
+   
+   tar cvf /home/pepito/empaquetado.tar /tmp/valencia
+                    ________________________________________
+                    
+   cat /etc/initlab
+   initdefault => 5
+   
+   yum groupinstall "Desktop" "Desktop Platform"
+                    "General Purpose Desktop"
+                    
+      1.- dhclient eth0
+      2.- yum groupinstall
+      3.- cat /etc/initlab
+                      initdefault => 5
+      4.- reboot
+                    ________________________________________
+  
+   Niveles INIT
+   
+         SERVER + DESKTOP -> 5
+         SERVER           -> 3
+         
+         single user      -> 5
