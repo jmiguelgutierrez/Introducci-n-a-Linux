@@ -92,3 +92,42 @@ mensajito
    du -sh  /tmp/ficheraco
    history > /tmp/loquellevohoy
    cat /tmp/loquellevohoy
+
+   cp /tmp/ficheraco /root
+   ___________________________________________________
+   cat /etc/passwd | wc -l
+   cat /etc/sysctl.conf
+   
+                              Command line
+                              
+                          |    |                 |     
+                     :q!  |    | vi file         |  wq!
+                          |    |                 |
+                          
+                          Shell linux
+   : modo ultima linea
+   
+   Editor de textos VI
+      h - hatras
+      j - jabajo
+      k - karriba
+      l - ladelante
+      
+   Con escape se va a la posición
+   
+   Esc
+     u -> undo
+     y -> hacer yyp
+   Esc
+     x -> borra un caracter
+     dd -> borra una linea
+     
+   cd /etc
+   cp /root/.bash_profile /root/.bash_profile.old
+   
+   Alt-F2 Ventana 2
+   Alt-F1 Ventana 1
+   
+   who
+   who -m
+   Cada vez que inicies una sesión teneis un tty
