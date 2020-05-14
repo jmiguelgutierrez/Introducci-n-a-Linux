@@ -1,0 +1,94 @@
+Utilizamos VirtualBox para instalar Ubuntu con las siguientes características:
+
+mongo
+Linux
+Oracle (64-bit)
+
+4MB RAM
+60 GB Almacenamiento
+
+4 hilos
+80%
+Deshabilitar audio
+Conectado a NAT
+USB X-> NO
+CD/DVD vivo para CD's normales
+
+Vamos a trabajar en arquitectura INTEL- X86/X64
+
+Es utilizado para control de misiles, submarina, aviones, etc.
+
+ORACLE LINUX 6
+Ctrl-Derecha se sale a WINDOWS
+Básico
+______
+
+Nombre del host: profe.aula24.pum
+paquetes rpm
+
+Comandos necesarios en Linux:
+who    -> Cuantas sesiones hay
+who -r 
+who -m
+who am i -> Quien soy
+man -> AYUDA
+man who
+pwd
+ls
+cd/
+/home/   -> Usuarios
+/etc/    -> Configuración
+/bin     -> Binarios
+/sbin    ->    "
+/opt/    -> Software de terceros
+/usr     -> Librerias y links /módulos
+/etc/init.d   -> Script de arranque
+/etc/profile
+/etc/yum.d    -> Repositorios
+
+ls -l atd
+file atd
+Ruta relativa ./atd
+Ruta absoluta /etc/init.d/atd
+
+cd /root
+ls
+ls -a ficheros ocultos
+ls -l | wc -l  -> Cuenta el nº de lineas
+
+cd /root
+ls -lrta
+
+cd /tmp
+pwd
+
+mkdir carpeta1
+mkdir /tmp/carpeta2
+mkdir /tmp/carpeton/lunes
+mkdir -p /tmp/carpeton/lunes
+touch te crea un fichero vacio
+echo "mensajito"> /tmp/ficherin
+
+cat ficherin
+mensajito
+                  _____________________________________________________________
+                  
+     stdin      -------->    Kernel        ---------> stdout
+                                |
+                                |
+                              stderr
+                              
+   echo "hola"> /dev/tty1       -> Devices
+                /dev/tty*
+                
+   rm -rf /tmp/borrando
+   cp ficherin /tmp/ficherin2
+   
+   dd if=/dev/zero of=/tmp/ficheraco bs=1024 count= 100000
+   ls -l /tmp/ficheraco
+   
+        if -> origen
+        of -> destino
+   du -sh  /tmp/ficheraco
+   history > /tmp/loquellevohoy
+   cat /tmp/loquellevohoy
