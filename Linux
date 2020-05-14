@@ -131,3 +131,26 @@ mensajito
    who
    who -m
    Cada vez que inicies una sesión teneis un tty
+   
+   id identificador de usuario
+   
+   Hacemos un ping a www.google.es
+   ifconfig eth0
+   Activamos internet -> dhclient eth0
+   
+   yum -> Gestor de Paquetes de instalación
+   yum list | grep -i desktop
+   GNOME -> Entorno gráfico
+   KDE   ->    "       "
+   yum install gnome-desktop.x86_64
+                 "      "   .i686
+   
+   reboot
+   
+   Linux es Multiusuario, Multitarea y Multihilo
+   
+   su -> superusuario
+   who nos muestra por pantalla lo siguiente:
+     pepito  tty3   2020-01-20
+     root    tty1   2020-01-20
+     root    tty2   2020-01-20 
