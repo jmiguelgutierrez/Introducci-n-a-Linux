@@ -626,3 +626,89 @@ ifconfig eth1 up
 
 wps ahi que desactivarlo
 Configuración y desactivarla y reiniciar
+                                                             { lo
+ifconfig eth1 down                             ifconfig -a   { eth0
+pkill -9 dhclient                                            { eth1
+
+route add default gw 10.2.4.1
+ping 195.235.113.3
+                       -------  Es confiable               
+                TCP    -------  Con los ACK
+
+TRANSPORTE    netstat -na | more
+
+                UDP    -------  No es confiable
+                                Mandas un "hola"  y puede no llegar
+                                
+ SESION
+ Socket         Ip origen
+                Ip destino                   Ejemplo:
+                Puerto origen                10.2.4.150:22   10.2.4.100:48187
+                Puerto destino
+                                      cat /etc/services | more                
+ ssh:puerto 22
+ http:puerto 80                       -Puerto-Servicio-Tipo de trafico
+ 
+ oracle vaut
+ Un servicio que no llega
+ 
+ PRESENTACIÓN
+     Como se codifican, como se leen los datos
+     ASCII
+ 
+ telnet no es encriptado, no es nada seguro
+ telnet no es encriptado, no es muy seguro
+ 
+ APLICACIÓN
+    DNS
+    HTTP
+    
+ DNS   ls -l /etc/nsswitch.conf  | grep hosts
+       ls -l /etc/hosts
+       echo "10.2.4.106 pepito" >> /etc/hosts
+       ping pepito
+       
+       ssh pepito
+       
+       ls -l /etc/resolv.conf   -> Dices donde esta el DNS
+       
+ echo "nameserver 172.16.2.2" >> /etc/resolv.conf
+                        ___________________________________________________
+ ifconfig eth1 10.2.4.110 netmask  255.255.255.0 up
+ 
+                                system-config-network
+ Nombre - eth1
+ Device - eth1
+ DHCP   - []
+ Static IP  - 10.2.4.150
+ Netmask    - 255.255.255.0
+ Gateway IP - 10.2.4.1
+ DNS        - 172.16.2.2
+                                             { DEVICE = eth1  
+ cd /etc/sysconfig/                          { TYPE = Ethernet
+ ls -l network                               { IPADDR = 10.2.4.150      
+ cat network
+ 
+ cd /etc/sysconfig/network-scripts/
+ ls -l ifcfg-eth
+ cat ifcfg-eth1
+ 
+ Inicialmente UNIX y luego salieron
+ RED HAT , CENTOS, ORACLE
+ UBUNTU es debian
+              { Denis Ritchie
+ Lenguaje C   { Kernigham
+ 
+ service NetWorkManager stop
+ service NetWorkManager status
+ chkconfig NetWorkManager off
+ Mañana veremos SERVICIOS
+ 
+ RANGO DE CLASES IP
+ CLASE A    0.0.0.0
+ CLASE B  128.0.0.0
+ CLASE C  192.0.0.0
+ CLASE D  224.0.0.0
+ CLASE E  240.0.0.0
+ _________________________________________________________
+ 
