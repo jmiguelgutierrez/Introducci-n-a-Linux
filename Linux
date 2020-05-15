@@ -370,4 +370,50 @@ ___________________________          ________
   blkid /dev/sdb1
   mkfs ->| ->|
   mkfs.ext3      /dev/sdb1
+  ______________________________________________________________
+  mkdir /carpeton
+  mount /dev/sdb1  /carpeton
+  pwd
+  ls -l -a
+  df -h | grep carpeton
   
+  cd/
+  umount /carpeton
+  cd /carpeton
+  ls 
+  df -h
+  
+  fsck es como chkdsk en WINDOWS
+  cp /etc/fstab  /etc/fstab.old
+  vi /etc/fstab
+  
+  /dev/sdb1 /carpeton ext3 defaults 1 2
+  
+  learning.oreilly.com/library/view/the-linux-command/      passwd: o'reilly123
+  
+  The Linux Command Line, 2nd Edition
+  www.oreilly.com/member
+   __________________________________________________________________________
+  Exportar de MVirtual
+
+  C:\Users\manana\documents\mongo.ova
+  
+  SWAP Memoria de intercambio en disco
+  partprobe relee un disco
+  
+  Ej: partprobe /dev/sdd
+      ls -l /dev/sdd
+      ls -l /dev/sdd1
+      ls -l /dev/sdd2
+  
+  En los File System tienes i-nodos y bloques de datos.
+  Se tiene que guardar metadata y data
+  
+    metadata
+  ___________________________________________________________________
+  | __  ______________________                                       |             
+  ||  ||                      |                                      |
+  ||  ||                      |                                      |
+  ||__||_____________________ |                                      |
+  ___________________________________________________________________|
+              data         
