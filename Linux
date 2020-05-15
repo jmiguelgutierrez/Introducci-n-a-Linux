@@ -351,3 +351,23 @@ ___________________________          ________
          mount /dev/sde1  /carpeta
          
   init 0 para parar la máquina
+  
+  Utilizamos en Virtual Box  el Adaptador puente como Adaptador 2
+  
+  p de partition al poner fdisk /dev/sdb
+  n de new
+  
+  Siempre tiene que haver una primaria
+  
+  1
+  +5G     w -> de write
+  
+  Para mostrar particiones:
+     __________________________ 
+     | fdisk -l | grep sdb    |
+     |________________________|
+  
+  blkid /dev/sdb1
+  mkfs ->| ->|
+  mkfs.ext3      /dev/sdb1
+  
