@@ -594,3 +594,35 @@ drwxrwxrwt
 
 chmod 1777 /tmp/miercoles
              
+cd /etc/udev   -> Para ver el rules
+cd / " /udev/rules.d
+
+ls -l 70
+ls -l 70-persistent-net.rules
+
+ps -ef|grep udev
+cat 70_persistent_net.rules
+         |_ Detecta las MAC's
+     
+__________________
+|                 |
+|                 |
+|                 |eth0
+|                 |
+|                 |eth1
+|                 |
+|                 |MAC -> MAC2  Ningun equipo puede tener la misma MAC que otro.
+__________________
+
+Direcciona DIR MAC con DIR IP
+
+arp -a
+address resolution protocol
+Muestra todas las MACs de los equipos del aula
+ping es protocolo ICMP
+
+ifconfig eth1 down
+ifconfig eth1 up
+
+wps ahi que desactivarlo
+Configuración y desactivarla y reiniciar
