@@ -316,8 +316,38 @@ FISICO                  eth0 -> Ethernet -> udev
                     
 SAN (Redes de fibra)
 
-Cabina de discos  
-___________________________
-|                          |         
-|                          |  SAN 
-|__________________________|
+      Cabina de discos  
+___________________________          ________   
+|                          |         |      |         HOST BUS ADAPTERS
+|                          |  SAN    |      |
+|__________________________|    __   |____|__| HBa1
+         |                     |__|  _______   
+         |_______________________^   |      |
+                                     |      |
+                                     |____|__| HBa2
+                                      _______
+                                      |      |
+                                      |      |
+                                      |____|__| HBa3
+   _________________________                                   
+  |   P1  |  P2   |  P3    |
+  __________________________
+  
+  P1 : File System, Montajej (Carpeta)
+  
+  DAS
+     1.- Detección disco
+         /dev/sdb
+              sdc
+              
+  fdisk -l | grep sd
+  hwinfo
+  
+     2.- Particionar
+         fdisk /dev/sde   ->   | sde1 | sde2 |
+     3.- File System
+         mkfs.ext3    /dev/sde1
+     4.- MONTAJE
+         mount /dev/sde1  /carpeta
+         
+  init 0 para parar la máquina
