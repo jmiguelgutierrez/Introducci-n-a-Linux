@@ -530,4 +530,67 @@ ps -ef | grep login
 ls -l /etc/passwd
 ls -l /etc/shadow
 ls -l /etc/motd
+                  ________________________________     
+                  |                               |
+                  | eth0 (NAT)                    |
+                  | ______________________        |
+                  | |                     |       |
+                  | |                     |       |
+                  | |                     |       |eth1 (puente)
+                  | |_____________________|       |
+                  _________________________________
+ ifconfig -a  (Todos los adaptadores)
+ 
+ Solicitar IP -> dhclient eth0
+ IP: 10.2.4.11
+     255.255.255.0
+     
+ Mia: 10.2.4.110           Aula: 10.2.4.1           
+ Profe: 10.2.4.150
+ 
+ ping 10.2.4.252
+ 
+ ssh     root@10.2.4.150
+ service   NetworkManager stop
+ 
+           Nodo 1               Nodo 2
+           ______               ______              pts/8
+           |     |              |     |
+           |     |              |     |                /bin/bash           
+           |     |__ssh ______> |     |
+           |     |              |  /etc/passwd            su - mariano
+            _____               ___/etc/shadow                /bin/bash  -> Effective UID
 
+sudo es un comando haciendote pasar por alguien
+
+ls -l llamada al i-nodo
+- fichero                           _rwx|r_x|r_x
+d directorio                     usuario      other
+l link
+b block
+c character
+
+openssh
+
+chmod
+chown
+chgrp
+      ______________________________________________________
+chown mariano miercoles
+chown -R oracle:oinstall carpeta
+      ______________________________________________________
+getfacl
+setfacl
+getfacl miercoles
+setfacl -m u:pepito:4 miercoles
+getfacl miercoles
+
+-rwxr_xr_x+   El + es un delimitador
+
+setfacl -m m: 7 miercoles
+t -> hay ejecución
+T -> No hay ejecución
+drwxrwxrwt
+
+chmod 1777 /tmp/miercoles
+             
