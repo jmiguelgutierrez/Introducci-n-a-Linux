@@ -228,7 +228,106 @@ En root poner passwd: cangetin para mariano
                                              /etc/group
                                  
 cd /etc/skel
-ls -l -a
-ls -lrta                             
+ls -l -a                             Nodo 1               Nodo 2
+ls -lrta                             ______               ______
+                                     |     |              |     |
+ssh mariano@localhost                |     |              |     |
+                                     |     |__ssh ______> |     |
+                                     |     |usuario@nodo2 |     |
+                                     ______               ______
+                                     
+SSH: Secure Shell
+ssh mariano@localhost
 
-ssh mariano@localhost                
+1. Comprobación llave
+2. login / password
+     |
+     /etc/shadow    es distinto de logout
+     
+   /etc/profile  (PROFILE GENERAL)
+   /home/mariano/.bash_profile
+   
+cat .bash_profile
+__________________________________________
+|                                         |
+|                                         |
+|                                         |
+|export PATH                              |       
+|PS1 = [\u@\h]\$                          |
+|export PS1                               |
+__________________________________________
+ssh mariano@localhost
+[u@h]$
+nologin para no utilizar ssh
+       _____________________________________________________
+
+usermod -G 20 mariano
+usermod -G games mariano
+usermod -g games mariano
+usermod -g 10 -G games mariano
+groups mariano
+
+/etc/group  -> Se encuentran todos los grupos
+
+cat /etc/group
+
+games:x:10
+
+wheel:x:20
+          ___________________________________________________
+umask = 0022
+system-config-users
+
+Te dice las cuentas  que hay creadas
+Solamente lo puede lanzar el root
+              LESSON 4
+              File Systems
+              
+Tipos de STORAGE
+________________
+DAS  -> Direct Attach Storage
+NAS  -> NetWork Attach Storage
+SAN  -> Storage Area Network (Fibra)
+
+|--------------------|
+|                    |
+|                    |
+|  |---|   |---|     |                         |-----------|
+|                    |                         |           |
+|                    |                         |           | 
+|  |---|   |---|     | TCP/IP    (Nivel 3)     |           |
+|  |---|   |---|     |<---------------------   |           |
+|                    |      FTP                |           |
+|  |---|   |---|     |      Samba/SMB          |           |
+|  |---|   |---|     |      NFS                   |           |
+|                    |                         -------------
+|--------------------|
+
+|--------------------|
+|                    |
+|                    |
+|  |---|   |---|     |                          --------          
+|  |---|   |---|     |                          |
+|                    | 
+|  |---|   |---|     |
+|  |---|   |---|     |
+|                    | 
+|--------------------|
+
+NIVELES DE LA TORRE OSI: Son 7 niveles
+
+APLICACIÓN
+PRESENTACIÓN
+SESIÓN
+TRANSPORTE
+RED                     IP  Fabricacion - Hostid
+ENLACE                  MAC: Medium Access Control
+FISICO                  eth0 -> Ethernet -> udev
+                    
+SAN (Redes de fibra)
+
+Cabina de discos  
+___________________________
+|                          |         
+|                          |  SAN 
+|__________________________|
