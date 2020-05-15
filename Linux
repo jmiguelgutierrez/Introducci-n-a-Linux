@@ -450,3 +450,84 @@ ___________________________          ________
                           ________________
                           
                      Para eso utilizo blkid
+  
+  
+  
+  El fichero scriptillo.sh consiste en:
+    scriptillo.sh -> while true; do sleep 5; done
+  
+  ps -ef | grep scriptillo.sh
+  
+  kill -9 5666   Con kill -9 matamos un proceso
+  kill -1        Con kill -1 nos toca reiniciar
+  
+  Si matas el padre matas los hijos
+  root 5666 4269
+  root 5669 5666
+  root 5671 4269
+  Proceso zombie no hay dios que lo mate . Solucion: reiniciar
+                   _________________________________________
+  fuser /carpeton
+  /carpeton/:    4269c
+  ps -ef | grep 4269
+  
+  sudo sysctl vm.swappiness=10
+  cat /etc/sysc
+  echo "vm.swappiness=10" >> /etc/sysctl.conf
+  
+  swapon
+  swapoff
+  mkswap
+  
+  dd if=/dev/zero of=/swapfile bs=1024 count=1000000
+  lvm logical volumen manager
+  
+  Pasos:
+  
+|--------------------|                       
+|                    |                1er Paso - Inicializar pv*        
+|                    |                         
+|                    |                2º Paso - (Volume Group) vg*         
+|                    |                         
+|                    |                3er Paso - Volumenes lv*         
+|                    |                          
+|  |-----------| sdc |                4º Paso - mkfs.ext3
+|                    |                         
+|  |-----------| sdd |                           
+|  |-----------| sde |                             
+|                    |                       
+|--------------------|                        
+  
+Google  lvm logical volumen manager
+
+pvcreate /dev/sde1
+vgcreate VG1 /dev/sde1
+lvcreate -L 1G -n vol1 VG1
+
+lvdisplay  -> Mostrar           Ruta: /dev/VG1/vol1
+     mapper es el driver
+lvextend -L +1G /dev/VG1/vol1  df -h |grep vol1
+
+Comandos adicionales
+>iostat 1 1000 /dev/sde1
+
+while true; do iostat /dev/sde1; sleep1; clear; done
+
+En una ventana el while
+En otra el dd
+
+dd if=/dev/sde1 of=/vol1/ficheraco bs=1024 count =1000000
+
+Se redirecciona el iostat al ficheraco
+Para saber el ratio de escritura
+
+vmstat 1 1000
+                  _______________________________
+netstat -na | grep 22
+   Para mirar las tramas
+                  ________________________________
+ps -ef | grep login
+ls -l /etc/passwd
+ls -l /etc/shadow
+ls -l /etc/motd
+
