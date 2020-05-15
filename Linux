@@ -215,3 +215,20 @@ mensajito
          SERVER           -> 3
          
          single user      -> 5
+_____________________________________________
+
+inittab                           /etc/passwd
+
+
+Crear cuenta de usuario
+_______________________
+
+useradd -u 510 -g 10 -d /home/mariano -m -s /bin/bash mariano
+En root poner passwd: cangetin para mariano
+                                             /etc/group
+                                 
+cd /etc/skel
+ls -l -a
+ls -lrta                             
+
+ssh mariano@localhost                
