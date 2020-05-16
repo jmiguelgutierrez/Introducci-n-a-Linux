@@ -712,3 +712,58 @@ TRANSPORTE    netstat -na | more
  CLASE E  240.0.0.0
  _________________________________________________________
  
+ ifconfig eth1 up
+ cat /etc/udev
+ cp ifcfg-eth1 ifcfg-eth2
+ vi ifcfg-eth2
+ ifup eth2
+ 
+                                        /etc/hosts
+                         Son entidades estáticas de nombres
+ 
+ RED     -> ROUTER
+ ENLACE  -> SWITCHES
+ FISICA  -> HUBS (Repetidor de señal)
+ 
+ bonding (Juntar varias adaptadores en un bond; varias bocas de red juntas)
+ 
+|--------------------|                         |--------------------|
+|                    |                         |                    |
+|    NODO 1          |                         |       NODO 2       | 
+|                    |                         |                    |
+|                    |                         |                    |
+|                    |                         |                    |
+|                    |       RED INTERNA       |                    |  
+|                    |-------------------------|                    |    
+|                    |                         |                    |
+|                    |-------------------------|                    |  
+|                    |                         |                    |    
+|                    |       HEARTBEAT         |                    |
+|--------------------|                         ---------------------- 
+
+MONTAJE DE CLUSTER DE ORACLE
+____________________________
+CLUSTER DE BIG DATA
+           MONGO
+           CLOUDERA
+           
+App
+ | |  ^   2
+ | |  |
+ | |_> 1   ___
+ |        |   |Master   
+ |        |___|  
+ |          |        ____       ____      _____
+ |          |_______|    |_____|    |_____|    |     BALANCEAS TODOS LOS NODOS
+ |                  |    |     |    |     |    |      SI SE CAE UN NODO NO PASA NADA
+ |__________________|____|_____|____|_____|____|
+
+CLUSTER HORIZONTAL TIPO BIG DATA
+
+Los Switches de bonding son lacp
+
+Aplicación putty es un clientesh de windows
+                        __________________________________________________
+                        
+cat loquellevohoy loquellevo >> historytmp
+
